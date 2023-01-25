@@ -30,3 +30,7 @@ iters = 0
 for i in range(20):
   model.learn(total_timesteps=TIMESTEPS, reset_num_timesteps=False, tb_log_name="A2C3")
   model.save(f"{models_dir}/{TIMESTEPS*i}")
+
+#____next_cell_______
+%load_ext tensorboard
+%tensorboard --logdir /content/SMOPS-2023/logs/A2C3_0
