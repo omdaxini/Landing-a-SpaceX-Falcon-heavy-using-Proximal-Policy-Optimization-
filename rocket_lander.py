@@ -191,7 +191,7 @@ class RocketLander(gym.Env):
                 friction=0.1,
                 restitution=0.0)
         )
-        self.water.color1 = rgb(70, 96, 176)
+        self.water.color1 = rgb(51,255,51)
 
         self.ship = self.world.CreateStaticBody(
             fixtures=fixtureDef(
@@ -436,7 +436,7 @@ class RocketLander(gym.Env):
             self.viewer.set_bounds(0, W, 0, H)
 
             sky = rendering.FilledPolygon(((0, 0), (0, H), (W, H), (W, 0)))
-            self.sky_color = rgb(126, 150, 233)
+            self.sky_color = rgb(0,76, 153)
             sky.set_color(*self.sky_color)
             self.sky_color_half_transparent = np.array((np.array(self.sky_color) + rgb(255, 255, 255))) / 2
             self.viewer.add_geom(sky)
