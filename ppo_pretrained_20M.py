@@ -1,6 +1,6 @@
 import gym
 import stable_baselines3
-from stable_baselines3 import PPO
+from stable_baselines3 import DDPG
 from gym.wrappers.record_video import RecordVideo
 from stable_baselines3.common.vec_env import DummyVecEnv
 from gym.envs.registration import registry, register, make, spec
@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
 # Load the trained agent
 #ppo2_RocketLander-v0_20000000_2019-05-05 03/26/38.pkl
-  model = PPO.load("/content/SMOPS-2023/model2/ppo2_RocketLander-v0_2000000_2023-01-23 08:04:12.zip")
+  model = DDPG.load("/content/SMOPS-2023/model2/ppo2_RocketLander-v0_2000000_2023-01-23 08:04:12.zip")
 
 
 #Trained agent in action
