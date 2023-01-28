@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
   with tf.compat.v1.Session(config=config):
   
-    model = PPO("MlpPolicy", env, learning_rate=0.0001,gamma=0.99, verbose=2,tensorboard_log=logdir)
+    model = DDPG("MlpPolicy", env, learning_rate=0.0001,gamma=0.99, verbose=2,tensorboard_log=logdir)
     model.learn(total_timesteps=timestep, reset_num_timesteps=False, tb_log_name="DDPG")#15M timesteps and overnight run on a Macbook worked fine(still can improve).
   
     model.save(filename)
